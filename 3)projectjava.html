@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Gailroy";
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: cornflowerblue;
+    }
+    #card{
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+    }
+    #card img{
+        height: 55%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+    #card h1{
+        margin: 10px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    #card h5{
+        font-size: 25px;
+        color:brown;
+        margin-bottom: 20px;
+    }
+    #card button{
+        background-color: cadetblue;
+        color: #fff;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 5px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+ 
+
+</style>
+<body>
+    <div id="card">
+        <img src="A.jpg" alt="">
+        <h1>Angal Priya</h1>
+        <h5>stanger</h5>
+        <div id="btn-container">
+          
+            <button id="add">Add Friend</button>
+        </div>
+    </div>
+
+    <script>
+        var istatus = document.querySelector("h5")
+        var btn = document.querySelector("#add")
+        var check=1
+
+        btn.addEventListener("click",function(){
+            if(check==0){
+            istatus.innerHTML = "Friends pooja"
+            istatus.style.color = "green"
+            btn.innerHTML ="Remove Friend"
+            check = 1
+
+        }
+        else{
+            istatus.innerHTML = "stanger"
+            istatus.style.color = "red"
+            btn.innerHTML ="Add Friend"
+            check=0
+            
+        }
+    }
+    )
+    
+        
+    
+    </script>
+    
+</body>
+</html>
